@@ -23,7 +23,7 @@
 		</ul>
 	</div>
 	<div id="home-list-learnmore">
-	<a href="<?php echo site_url('about') ?>">Learn more</a> &nbsp; <img src="<?php echo base_url(); ?>assets/images/next.png"/>
+	<a href="<?php echo base_url('about') ?>">Learn more</a> &nbsp; <img src="<?php echo base_url(); ?>assets/images/next.png"/>
 	</div>
 </div>
 </div>
@@ -65,58 +65,58 @@
 	
 	<div id="subcategory-professional" class="hide">
 	<div class="label-toolbar">  
-		<a href="<?php echo site_url('about') ?>">SAR</a>
-		<a href="<?php echo site_url('products') ?>">VERILOG</a>
+		<a href="<?php echo base_url('about') ?>">SAR</a>
+		<a href="<?php echo base_url('products') ?>">VERILOG</a>
 	</div>	
 	</div>
 
 	<div id="subcategory-kuliah" class="hide">
 	<div class="label-toolbar">  
-		<a href="<?php echo site_url('category') ?>">ELEKTRONIKA</a>
-		<a href="<?php echo site_url('category') ?>">KOMPUTER</a>
-		<a href="<?php echo site_url('category') ?>">INFORMATIKA</a>
-		<a href="<?php echo site_url('category') ?>">FARMASI</a>
+		<a href="<?php echo base_url('category') ?>">ELEKTRONIKA</a>
+		<a href="<?php echo base_url('category') ?>">KOMPUTER</a>
+		<a href="<?php echo base_url('category') ?>">INFORMATIKA</a>
+		<a href="<?php echo base_url('category') ?>">FARMASI</a>
 	</div>	
 	</div>	
 
 	<div id="subcategory-sma" class="hide">
 	<div class="label-toolbar">  
-		<a href="<?php echo site_url('category') ?>">MATEMATIKA</a>
-		<a href="<?php echo site_url('category') ?>">FISIKA</a>
-		<a href="<?php echo site_url('category') ?>">KIMIA</a>
-		<a href="<?php echo site_url('category') ?>">BIOLOGI</a>
-		<a href="<?php echo site_url('category') ?>">SEJARAH</a>
-		<a href="<?php echo site_url('category') ?>">SOSIOLOGI</a>
+		<a href="<?php echo base_url('category') ?>">MATEMATIKA</a>
+		<a href="<?php echo base_url('category') ?>">FISIKA</a>
+		<a href="<?php echo base_url('category') ?>">KIMIA</a>
+		<a href="<?php echo base_url('category') ?>">BIOLOGI</a>
+		<a href="<?php echo base_url('category') ?>">SEJARAH</a>
+		<a href="<?php echo base_url('category') ?>">SOSIOLOGI</a>
 	</div>	
 	</div>	
 
 	<div id="subcategory-smp" class="hide">
 	<div class="label-toolbar">  
-		<a href="<?php echo site_url('category') ?>">MATEMATIKA</a>
-		<a href="<?php echo site_url('category') ?>">FISIKA</a>
-		<a href="<?php echo site_url('category') ?>">KIMIA</a>
-		<a href="<?php echo site_url('category') ?>">BIOLOGI</a>
-		<a href="<?php echo site_url('category') ?>">SEJARAH</a>
+		<a href="<?php echo base_url('category') ?>">MATEMATIKA</a>
+		<a href="<?php echo base_url('category') ?>">FISIKA</a>
+		<a href="<?php echo base_url('category') ?>">KIMIA</a>
+		<a href="<?php echo base_url('category') ?>">BIOLOGI</a>
+		<a href="<?php echo base_url('category') ?>">SEJARAH</a>
 	</div>	
 	</div>	
 
 	<div id="subcategory-sd" class="hide">
 	<div class="label-toolbar">  
-		<a href="<?php echo site_url('category') ?>">MATEMATIKA</a>
-		<a href="<?php echo site_url('category') ?>">IPS</a>
-		<a href="<?php echo site_url('category') ?>">IPA</a>
+		<a href="<?php echo base_url('category') ?>">MATEMATIKA</a>
+		<a href="<?php echo base_url('category') ?>">IPS</a>
+		<a href="<?php echo base_url('category') ?>">IPA</a>
 	</div>	
 	</div>	
 	
 	<div id="subcategory-hobby" class="hide">
 	<div class="label-toolbar">  
-		<a href="<?php echo site_url('category') ?>">GARDENING</a>
+		<a href="<?php echo base_url('category') ?>">GARDENING</a>
 	</div>	
 	</div>	
 
 	<div id="subcategory-other" class="hide">
 	<div class="label-toolbar">  
-		<a href="<?php echo site_url('category') ?>">UNKNOWN</a>
+		<a href="<?php echo base_url('category') ?>">UNKNOWN</a>
 	</div>	
 	</div>	
 	
@@ -258,19 +258,19 @@ Comment 120
 </div>
 
 <div id="category-box-content">
-	<div id="category-box-content-icon"><a href="<?php echo site_url('topics') ?>"><img src="<?php echo base_url(); ?>assets/images/topic1.png" /></a></div>
-	<div id="category-box-content-icon"><a href="<?php echo site_url('topics') ?>"><img src="<?php echo base_url(); ?>assets/images/topic2.png" /></a></div>
-	<div id="category-box-content-icon"><a href="<?php echo site_url('topics') ?>"><img src="<?php echo base_url(); ?>assets/images/topic3.png" /></a></div>
-	<div id="category-box-content-icon"><a href="<?php echo site_url('topics') ?>"><img src="<?php echo base_url(); ?>assets/images/topic4.png" /></a></div>
-	<div id="category-box-content-icon"><a href="<?php echo site_url('topics') ?>"><img src="<?php echo base_url(); ?>assets/images/topic5.png" /></a></div>
-	<div id="category-box-content-icon"><a href="<?php echo site_url('topics') ?>"><img src="<?php echo base_url(); ?>assets/images/topic6.png" /></a></div>
-	<div id="category-box-content-icon"><a href="<?php echo site_url('topics') ?>"><img src="<?php echo base_url(); ?>assets/images/topic7.png" /></a></div>
-	<div id="category-box-content-icon"><a href="<?php echo site_url('topics') ?>"><img src="<?php echo base_url(); ?>assets/images/topic8.png" /></a></div>
-	<div id="category-box-content-icon"><a href="<?php echo site_url('topics') ?>"><img src="<?php echo base_url(); ?>assets/images/topic9.png" /></a></div>
-	<div id="category-box-content-icon"><a href="<?php echo site_url('topics') ?>"><img src="<?php echo base_url(); ?>assets/images/topic10.png" /></a></div>
-	<div id="category-box-content-icon"><a href="<?php echo site_url('topics') ?>"><img src="<?php echo base_url(); ?>assets/images/topic1.png" /></a></div>
-	<div id="category-box-content-icon"><a href="<?php echo site_url('topics') ?>"><img src="<?php echo base_url(); ?>assets/images/topic2.png" /></a></div>
-	<div id="category-box-content-icon"><a href="<?php echo site_url('topics') ?>"><img src="<?php echo base_url(); ?>assets/images/topic3.png" /></a></div>
-	<div id="category-box-content-icon"><a href="<?php echo site_url('topics') ?>"><img src="<?php echo base_url(); ?>assets/images/topic4.png" /></a></div>
-	<div id="category-box-content-icon"><a href="<?php echo site_url('topics') ?>"><img src="<?php echo base_url(); ?>assets/images/topic5.png" /></a></div>
+	<div id="category-box-content-icon"><a href="<?php echo base_url('topic/1') ?>"><img src="<?php echo base_url(); ?>assets/images/topic1.png" /></a></div>
+	<div id="category-box-content-icon"><a href="<?php echo base_url('topic/2') ?>"><img src="<?php echo base_url(); ?>assets/images/topic2.png" /></a></div>
+	<div id="category-box-content-icon"><a href="<?php echo base_url('topic/3') ?>"><img src="<?php echo base_url(); ?>assets/images/topic3.png" /></a></div>
+	<div id="category-box-content-icon"><a href="<?php echo base_url('topic/4') ?>"><img src="<?php echo base_url(); ?>assets/images/topic4.png" /></a></div>
+	<div id="category-box-content-icon"><a href="<?php echo base_url('topic/5') ?>"><img src="<?php echo base_url(); ?>assets/images/topic5.png" /></a></div>
+        <div id="category-box-content-icon"><a href="<?php echo base_url('topic/6') ?>"><img src="<?php echo base_url(); ?>assets/images/topic6.png" /></a></div>
+        <div id="category-box-content-icon"><a href="<?php echo base_url('topic/7') ?>"><img src="<?php echo base_url(); ?>assets/images/topic7.png" /></a></div>
+	<div id="category-box-content-icon"><a href="<?php echo base_url('topic/8') ?>"><img src="<?php echo base_url(); ?>assets/images/topic8.png" /></a></div>
+	<div id="category-box-content-icon"><a href="<?php echo base_url('topic/9') ?>"><img src="<?php echo base_url(); ?>assets/images/topic9.png" /></a></div>
+	<div id="category-box-content-icon"><a href="<?php echo base_url('topic/10') ?>"><img src="<?php echo base_url(); ?>assets/images/topic10.png" /></a></div>
+	<div id="category-box-content-icon"><a href="<?php echo base_url('topic/11') ?>"><img src="<?php echo base_url(); ?>assets/images/topic1.png" /></a></div>
+	<div id="category-box-content-icon"><a href="<?php echo base_url('topic/12') ?>"><img src="<?php echo base_url(); ?>assets/images/topic2.png" /></a></div>
+	<div id="category-box-content-icon"><a href="<?php echo base_url('topic/13') ?>"><img src="<?php echo base_url(); ?>assets/images/topic3.png" /></a></div>
+	<div id="category-box-content-icon"><a href="<?php echo base_url('topic/14') ?>"><img src="<?php echo base_url(); ?>assets/images/topic4.png" /></a></div>
+	<div id="category-box-content-icon"><a href="<?php echo base_url('topic/15') ?>"><img src="<?php echo base_url(); ?>assets/images/topic5.png" /></a></div>
 </div>	
