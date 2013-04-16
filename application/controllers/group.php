@@ -1,27 +1,21 @@
 <?php
 
-class Group extends MY_Controller
-{
-    
-  public function __construct()
-  {
-    parent::__construct();
-  }
+class Group extends MY_Controller {
 
-  public function show($topic_id = 1)
-  {
-            $this->load->helper('url'); 
+    public function __construct() {
+        parent::__construct();
+    }
 
-            if ( ! file_exists('application/views/pages/home.php'))
-            {
-                    // Whoops, we don't have a page for that!
-                    show_404();
-            }
+    public function index() {
+        $data['title'] = "Group Index";
+        $data['content'] = 'groups/index';
+        $this->load->view($this->layout, $data);
+    }
 
-            $data['title'] = "Test";
-            $data['content'] = 'topics/'.$topic_id;
+    public function show($group_id = 1) {
+        $data['title'] = 'Group ' . $group_id;
+        $data['content'] = 'groups/' . $group_id;
+        $this->load->view($this->layout, $data);
+    }
 
-            $this->load->view('layout/master', $data);
-  }
-  
 }
