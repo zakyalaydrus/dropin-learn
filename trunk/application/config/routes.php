@@ -41,5 +41,13 @@
 $route['default_controller'] = "home";
 $route['404_override'] = '';
 
+$route['login'] = "home/login";
+$route['signup'] = "home/signup";
+$route['about'] = "home/about";
+
+$route['category/(:num)'] = "category/show/$1";
+$route['topic/(:num)'] = "topic/show/$1";
+$route['group/(:num)'] = "group/show/$1";
+
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

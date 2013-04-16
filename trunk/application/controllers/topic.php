@@ -7,31 +7,15 @@ class Topic extends MY_Controller {
     }
 
     public function index() {
-        $this->load->helper('url');
-
-        if (!file_exists('application/views/pages/home.php')) {
-            // Whoops, we don't have a page for that!
-            show_404();
-        }
-
-        $data['title'] = "Test";
+        $data['title'] = "Topic List";
         $data['content'] = 'topics/index';
-
-        $this->load->view('layout/master', $data);
+        $this->load->view($this->layout, $data);
     }
 
     public function show($topic_id = 1) {
-        $this->load->helper('url');
-
-        if (!file_exists('application/views/pages/home.php')) {
-            // Whoops, we don't have a page for that!
-            show_404();
-        }
-
-        $data['title'] = "Test";
+        $data['title'] = "Topic " . $topic_id;
         $data['content'] = 'topics/' . $topic_id;
-
-        $this->load->view('layout/master', $data);
+        $this->load->view($this->layout, $data);
     }
 
 }

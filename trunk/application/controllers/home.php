@@ -7,31 +7,27 @@ class Home extends MY_Controller {
     }
 
     public function index() {
-        $this->load->helper('url');
-
-        if (!file_exists('application/views/pages/home.php')) {
-            // Whoops, we don't have a page for that!
-            show_404();
-        }
-
-        $data['title'] = "Test";
-        $data['content'] = 'topics/index';
-
-        $this->load->view('layout/master', $data);
+        $data['title'] = "Home";
+        $data['content'] = 'home/index';
+        $this->load->view($this->layout, $data);
     }
 
-    public function show($topic_id = 1) {
-        $this->load->helper('url');
+    public function login() {
+        $data['title'] = "Home";
+        $data['content'] = 'home/login';
+        $this->load->view($this->layout, $data);
+    }    
 
-        if (!file_exists('application/views/pages/home.php')) {
-            // Whoops, we don't have a page for that!
-            show_404();
-        }
+    public function signup() {
+        $data['title'] = "Home";
+        $data['content'] = 'home/signup';
+        $this->load->view($this->layout, $data);
+    }    
 
-        $data['title'] = "Test";
-        $data['content'] = 'topics/' . $topic_id;
-
-        $this->load->view('layout/master', $data);
-    }
-
+    public function about() {
+        $data['title'] = "Home";
+        $data['content'] = 'home/about';
+        $this->load->view($this->layout, $data);
+    }    
+    
 }

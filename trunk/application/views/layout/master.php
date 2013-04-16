@@ -154,7 +154,7 @@
             <!-- Site navigation menu -->
             <div id="header-navmenu">
                 <ul>
-                    <li><a href="<?php echo site_url('home') ?>">Home</a>
+                    <li><a href="<?php echo site_url('/') ?>">Home</a>
                     <li>|</li>
                     <li><a href="<?php echo site_url('login') ?>">Log In</a>
                     <li>|</li>
@@ -170,10 +170,10 @@
         </div>  
 
     <body>
+        
         <div class="container">
             <?php $this->load->view($content); ?>
         </div>
-
 
         <div id="footer">
             <hr />
