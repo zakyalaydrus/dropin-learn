@@ -154,13 +154,13 @@
             <!-- Site navigation menu -->
             <div id="header-navmenu">
                 <ul>
-                    <li><a href="<?php echo site_url('/') ?>">Home</a>
+                    <li><a href="<?php echo base_url('/') ?>">Home</a>
                     <li>|</li>
-                    <li><a href="<?php echo site_url('login') ?>">Log In</a>
+                    <li><a href="<?php echo base_url('login') ?>">Log In</a>
                     <li>|</li>
-                    <li><a href="<?php echo site_url('signup') ?>">Sign Up</a>
+                    <li><a href="<?php echo base_url('signup') ?>">Sign Up</a>
                     <li>|</li>
-                    <li><a href="<?php echo site_url('about') ?>">About</a>
+                    <li><a href="<?php echo base_url('about') ?>">About</a>
                 </ul>
             </div>	
         </div>
