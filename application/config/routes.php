@@ -45,9 +45,13 @@ $route['login'] = "home/login";
 $route['signup'] = "home/signup";
 $route['about'] = "home/about";
 
-$route['category/(:num)'] = "category/show/$1";
-$route['topic/(:num)'] = "topic/show/$1";
-$route['group/(:num)'] = "group/show/$1";
+$route['category/(:num)'] = "categories/show/$1";
+$route['topic/(:num)'] = "topics/show/$1";
+$route['group/(:num)'] = "groups/show/$1";
+$route['user/(:num)'] = "users/show/$1";
+
+$route['user/(:num)/follows'] = "user/follows/$1";
+$route['user/(:num)/topics'] = "user/topics/$1";
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
