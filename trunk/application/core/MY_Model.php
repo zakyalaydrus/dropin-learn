@@ -3,10 +3,12 @@
 class MY_Model extends CI_Model {
 
     public $table;
+    public $id_name;
 
     public function __construct() {
         parent::__construct();
         $this->load->database();
+        $this->id_name = 'id';
     }
 
     public function find() {
@@ -14,7 +16,7 @@ class MY_Model extends CI_Model {
     }
 
     public function find_by_id($id) {
-        return $this->db->where('id', $id)->limit(1)->get($this->table)->row();
+        return $this->db->where($this->id_name, $id)->get($this->table)->row_array();
     }
 
     public function insert($data) {
