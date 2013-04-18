@@ -7,6 +7,7 @@ class Tests extends MY_Controller {
         $this->load->dbforge();
         $this->load->model('user');
         $this->load->model('activity');
+        $this->load->model('useralias');
     }
 
     public function install() {
@@ -26,6 +27,7 @@ class Tests extends MY_Controller {
     public function install_users()
     {
         $this->dbforge->drop_table('user');
+        $this->dbforge->drop_table('useralias');
         $this->dbforge->drop_table('activity');
         $this->dbforge->drop_table('history');
         $this->dbforge->drop_table('skill_point');
@@ -46,6 +48,11 @@ class Tests extends MY_Controller {
             'point' => array('type'=>'INT','constraint'=>5,'unsigned'=>TRUE,),
         );
         
+        $user_alias_field = array(
+            'alias_name' => array('type'=>'VARCHAR','constraint'=>'100',),
+            'user_id' => array('type'=>'INT','constraint'=>5,'unsigned'=>TRUE,),
+        );        
+        
         $this->dbforge->add_field($user_field);
         $this->dbforge->add_key('user_id', TRUE);
         $this->dbforge->create_table('user');
@@ -54,6 +61,10 @@ class Tests extends MY_Controller {
         $this->dbforge->add_key('user_id', TRUE);
         $this->dbforge->create_table('activity');
         
+        $this->dbforge->add_field($user_alias_field);
+        $this->dbforge->add_key('alias_name', TRUE);
+        $this->dbforge->create_table('useralias');
+
         echo '<p>Created user table...</p>';
 
         //creating sample user
@@ -71,6 +82,11 @@ class Tests extends MY_Controller {
         $data['time'] = '2013-04-19-04:00'; 
         $data['point'] = 10;
         $this->activity->insert($data);
+        
+        unset($data);
+        $data['alias_name'] = 'yayan';
+        $data['user_id'] = 1;
+        $this->useralias->insert($data);        
     }
 
     public function install_topics()
