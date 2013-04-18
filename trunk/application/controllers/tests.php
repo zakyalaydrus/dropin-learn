@@ -6,6 +6,7 @@ class Tests extends MY_Controller {
         parent::__construct();
         $this->load->dbforge();
         $this->load->model('user');
+        $this->load->model('activity');
     }
 
     public function install() {
@@ -17,43 +18,69 @@ class Tests extends MY_Controller {
         echo '<h1>Installing Initial Dropin Database</h1>';
 
         //Creating user table
+        $this->install_users();
+        $this->install_topics();
+        $this->install_groups();
+    }
+    
+    public function install_users()
+    {
         $this->dbforge->drop_table('user');
-        $fields = array(
-            'user_id' => array(
-                'type' => 'INT',
-                'constraint' => 5,
-                'unsigned' => TRUE,
-                'auto_increment' => TRUE
-            ),
-            'name' => array(
-                'type' => 'VARCHAR',
-                'constraint' => '100',
-            ),
-            'display_name' => array(
-                'type' => 'VARCHAR',
-                'constraint' => '100',
-                'default' => 'Dropin User',
-            ),
-            'email' => array(
-                'type' => 'TEXT',
-                'null' => TRUE,
-            ),
-            'birthday' => array(
-                'type' => 'DATE',
-                'null' => TRUE,
-            ),
+        $this->dbforge->drop_table('activity');
+        $this->dbforge->drop_table('history');
+        $this->dbforge->drop_table('skill_point');
+        $this->dbforge->drop_table('skill');
+        
+        $user_field = array(
+            'user_id' => array('type'=>'INT','constraint'=>5,'unsigned'=>TRUE,'auto_increment'=>TRUE),
+            'name' => array('type'=>'VARCHAR','constraint'=>'100',),
+            'display_name' => array('type'=>'VARCHAR','constraint'=>'100','default'=>'Dropin User',),
+            'email' => array('type'=>'TEXT','null'=>TRUE,),
+            'birthday' => array('type'=>'DATE','null'=>TRUE,),
         );
-        $this->dbforge->add_field($fields);
+
+        $activity_field = array(
+            'user_id' => array('type'=>'INT','constraint'=>5,'unsigned'=>TRUE,),
+            'activity_mark' => array('type'=>'VARCHAR','constraint'=>'100',),
+            'time' => array('type'=>'TIME','null'=>TRUE,),
+            'point' => array('type'=>'INT','constraint'=>5,'unsigned'=>TRUE,),
+        );
+        
+        $this->dbforge->add_field($user_field);
         $this->dbforge->add_key('user_id', TRUE);
         $this->dbforge->create_table('user');
+        
+        $this->dbforge->add_field($activity_field);
+        $this->dbforge->add_key('user_id', TRUE);
+        $this->dbforge->create_table('activity');
+        
         echo '<p>Created user table...</p>';
 
         //creating sample user
+        unset($data);        
         $data['name'] = 'yayan';
         $data['display_name'] = 'yayan';
         $data['email'] = 'yansyaf@gmail.com';
         $data['birthday'] = '1985-06-04';
         $this->user->insert($data);
+        
+        //creating sample activity
+        unset($data);
+        $data['user_id'] = 1;
+        $data['activity_mark'] = 0; 
+        $data['time'] = '2013-04-19-04:00'; 
+        $data['point'] = 10;
+        $this->activity->insert($data);
     }
 
+    public function install_topics()
+    {
+        
+    }
+
+    public function install_groups()
+    {
+        
+    }
+    
 }
