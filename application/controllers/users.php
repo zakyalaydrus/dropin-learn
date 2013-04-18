@@ -5,8 +5,8 @@ class Users extends MY_Controller {
     public function __construct() {
         parent::__construct();
         $this->load->model('user');
-        $this->load->model('useralias');
-        $this->load->model('activity');
+        $this->load->model('user_alias');
+        $this->load->model('user_activity');
     }
 
     public function index() {
@@ -16,22 +16,20 @@ class Users extends MY_Controller {
     }
 
     public function show($user_id = 1) {
-        
         if (!is_numeric($user_id))
         {
-            $alias = $this->useralias->find_by_id($user_id);
+            $alias = $this->user_alias->find_by_id($user_id);
             unset($user_id);
             $user_id = $alias['user_id'];
         }
         
         $user = $this->user->find_by_id($user_id);
-        $activity = $this->activity->find_by_id($user_id);
+        $activity = $this->user_activity->find_by_id($user_id);
         
-        //var_dump($activity); die();
+        $data['title'] = 'User ' . $user_id;
+        $data['content'] = 'users/user_home';
         $data['user'] = $user;        
         $data['activity'] = $activity;
-        $data['title'] = 'User ' . $user_id;
-        $data['content'] = 'users/' . $user_id;
         $this->load->view($this->layout, $data);
     }
 

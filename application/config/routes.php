@@ -38,20 +38,24 @@
 |
 */
 
-$route['default_controller'] = "home";
+$route['default_controller'] = "homes";
 $route['404_override'] = '';
 
-$route['login'] = "home/login";
-$route['signup'] = "home/signup";
-$route['about'] = "home/about";
+$route['login'] = "homes/login";
+$route['signup'] = "homes/signup";
+$route['about'] = "homes/about";
 
-$route['category/(:num)'] = "categories/show/$1";
-$route['topic/(:num)'] = "topics/show/$1";
-$route['group/(:num)'] = "groups/show/$1";
 $route['user/(:any)'] = "users/show/$1";
-
 $route['user/(:num)/groups'] = "users/groups/$1";
 $route['user/(:num)/topics'] = "users/topics/$1";
+
+$route['topic/(:any)/(:any)'] = "topics/show/$1/$2";
+
+$route['group/(:any)'] = "groups/show/$1";
+
+$route['category/(:num)'] = "categories/show/$1";
+
+$route['tests/install'] = "tests/install";
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

@@ -4,6 +4,7 @@ class Topics extends MY_Controller {
 
     public function __construct() {
         parent::__construct();
+        $this->load->model('topic');        
     }
 
     public function index() {
@@ -12,9 +13,14 @@ class Topics extends MY_Controller {
         $this->load->view($this->layout, $data);
     }
 
-    public function show($topic_id = 1) {
+    public function show($topic_alias = '', $topic_id = 1) {
+
+        /* todo: check if topic alias is correct */
+        $topic = $this->topic->find_by_id($topic_id);
+
         $data['title'] = "Topic " . $topic_id;
-        $data['content'] = 'topics/' . $topic_id;
+        $data['content'] = 'topics/topic_home';
+        $data['topic'] = $topic;
         $this->load->view($this->layout, $data);
     }
 
