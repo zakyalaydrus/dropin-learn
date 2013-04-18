@@ -1,6 +1,6 @@
 <?php
 
-class Install extends MY_Controller {
+class Installs extends MY_Controller {
 
     public function __construct() {
         parent::__construct();

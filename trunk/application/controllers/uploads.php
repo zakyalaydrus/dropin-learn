@@ -1,6 +1,6 @@
 <?php
 
-class Upload extends MY_Controller {
+class Uploads extends MY_Controller {
 
     function __construct() {
         parent::__construct();

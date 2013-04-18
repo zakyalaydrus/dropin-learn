@@ -1,6 +1,6 @@
 <?php
 
-class Topic extends MY_Controller {
+class Topics extends MY_Controller {
 
     public function __construct() {
         parent::__construct();
