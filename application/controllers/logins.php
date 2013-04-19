@@ -54,7 +54,7 @@ class Logins extends MY_Controller {
         } else {
             // Oh, holdon sir.
             $this->session->set_flashdata('error_message', 'Invalid login or password.');
-            redirect('login');
+            redirect(base_url('login'));
         }
     }
 
