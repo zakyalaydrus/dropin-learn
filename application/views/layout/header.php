@@ -147,23 +147,7 @@
             }
         </script>
 
-        <div id="header-container">
-            <div id="header-logo">
-                <img src="<?php echo base_url(); ?>assets/images/dropin_logo.png" /> 
-            </div>
-            <!-- Site navigation menu -->
-            <div id="header-navmenu">
-                <ul>
-                    <li><a href="<?php echo base_url('/') ?>">Home</a>
-                    <li>|</li>
-                    <li><a href="<?php echo base_url('login') ?>">Log In</a>
-                    <li>|</li>
-                    <li><a href="<?php echo base_url('signup') ?>">Sign Up</a>
-                    <li>|</li>
-                    <li><a href="<?php echo base_url('about') ?>">About</a>
-                </ul>
-            </div>	
-        </div>
+        <?php $this->load->view('layout/navigation'); ?>
 
         <div id="searchbar">
             <input type="text" name="textfield" id="textfield" class="search" />	

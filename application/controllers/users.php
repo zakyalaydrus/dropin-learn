@@ -4,7 +4,8 @@ class Users extends MY_Controller {
 
     public function __construct() {
         parent::__construct();
-        $this->load->model('user');
+        $this->load->library('login');
+        $this->load->model('user_profile');
         $this->load->model('user_alias');
         $this->load->model('user_activity');
     }
@@ -16,32 +17,32 @@ class Users extends MY_Controller {
     }
 
     public function show($user_id = 1) {
-        if (!is_numeric($user_id))
-        {
+        if (!is_numeric($user_id)) {
             $alias = $this->user_alias->find_by_id($user_id);
             unset($user_id);
             $user_id = $alias['user_id'];
         }
-        
-        $user = $this->user->find_by_id($user_id);
-        $activity = $this->user_activity->find_by_id($user_id);
-        
+
         $data['title'] = 'User ' . $user_id;
         $data['content'] = 'users/user_home';
-        $data['user'] = $user;        
-        $data['activity'] = $activity;
+        $data['user'] = $this->user_profile->find_by_id($user_id);
+        $data['activity'] = $this->user_activity->find_by_id($user_id);        
+        $data['login'] = $this->set_login_status();
         $this->load->view($this->layout, $data);
     }
 
     public function groups($user_id = 1) {
         $data['title'] = 'User ' . $user_id;
         $data['content'] = 'users/' . $user_id;
+        $data['login'] = $this->set_login_status();        
         $this->load->view($this->layout, $data);
     }
-    
+
     public function topics($user_id = 1) {
         $data['title'] = 'User Topic Lists' . $user_id;
         $data['content'] = 'users/topics';
+        $data['login'] = $this->set_login_status();
         $this->load->view($this->layout, $data);
-    }  
+    }
+
 }

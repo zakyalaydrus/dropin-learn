@@ -10,6 +10,7 @@ class Topics extends MY_Controller {
     public function index() {
         $data['title'] = "Topic List";
         $data['content'] = 'topics/index';
+        $data['login'] = $this->set_login_status();        
         $this->load->view($this->layout, $data);
     }
 
@@ -21,6 +22,7 @@ class Topics extends MY_Controller {
         $data['title'] = "Topic " . $topic_id;
         $data['content'] = 'topics/topic_home';
         $data['topic'] = $topic;
+        $data['login'] = $this->set_login_status();        
         $this->load->view($this->layout, $data);
     }
 

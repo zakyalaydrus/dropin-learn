@@ -11,6 +11,7 @@ class Groups extends MY_Controller {
     public function index() {
         $data['title'] = "Group Index";
         $data['content'] = 'groups/index';
+        $data['login'] = $this->set_login_status();        
         $this->load->view($this->layout, $data);
     }
 
@@ -27,6 +28,7 @@ class Groups extends MY_Controller {
         $data['title'] = 'Group ' . $group_id;
         $data['content'] = 'groups/group_home';
         $data['group'] = $group;
+        $data['login'] = $this->set_login_status();        
         $this->load->view($this->layout, $data);
     }
 

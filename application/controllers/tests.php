@@ -13,6 +13,11 @@ class Tests extends MY_Controller {
         $this->load->model('group_alias');
     }
 
+    public function login()
+    {
+        $this->load->view('login');
+    }
+    
     public function install() {
         //first, make sure you have set up correct database connection
         //: username, password, and database name
