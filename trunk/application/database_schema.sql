@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 19, 2013 at 12:41 AM
+-- Generation Time: Apr 19, 2013 at 04:22 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -23,7 +23,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `group`
+-- Table structure for table `groups`
 --
 
 CREATE TABLE IF NOT EXISTS `groups` (
@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `groups` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
--- Dumping data for table `group`
+-- Dumping data for table `groups`
 --
 
 INSERT INTO `groups` (`group_id`, `name`, `description`) VALUES
@@ -44,7 +44,7 @@ INSERT INTO `groups` (`group_id`, `name`, `description`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `group_alias`
+-- Table structure for table `groups_alias`
 --
 
 CREATE TABLE IF NOT EXISTS `groups_alias` (
@@ -54,7 +54,7 @@ CREATE TABLE IF NOT EXISTS `groups_alias` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `group_alias`
+-- Dumping data for table `groups_alias`
 --
 
 INSERT INTO `groups_alias` (`alias_name`, `group_id`) VALUES
@@ -85,7 +85,7 @@ INSERT INTO `permissions` (`id`, `name`, `description`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `topic`
+-- Table structure for table `topics`
 --
 
 CREATE TABLE IF NOT EXISTS `topics` (
@@ -97,35 +97,12 @@ CREATE TABLE IF NOT EXISTS `topics` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
--- Dumping data for table `topic`
+-- Dumping data for table `topics`
 --
 
 INSERT INTO `topics` (`topic_id`, `name`, `description`, `topic_url`) VALUES
 (1, 'Matematika Diskrit', 'Matematika diskrit adalah...', 'matematika-diskrit'),
 (2, 'Farmakologi Klinis', 'Farmakologi klinis adalah...', 'farmakologi-klinis');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `user`
---
-
-CREATE TABLE IF NOT EXISTS `users_profile` (
-  `user_id` int(5) unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(100) NOT NULL,
-  `display_name` varchar(100) NOT NULL DEFAULT 'Dropin User',
-  `email` varchar(100) NOT NULL,
-  `birthday` date DEFAULT NULL,
-  PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
-
---
--- Dumping data for table `user`
---
-
-INSERT INTO `users_profile` (`user_id`, `name`, `display_name`, `email`, `birthday`) VALUES
-(1, 'yayan', 'yayan', 'yansyaf@gmail.com', '1985-06-04'),
-(2, 'nurul maulidiah', 'nurul', 'lia.sf07@gmail.com', '1988-11-17');
 
 -- --------------------------------------------------------
 
@@ -142,14 +119,57 @@ CREATE TABLE IF NOT EXISTS `users` (
   `last_login` date DEFAULT NULL,
   `active` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `login`, `password`, `last_login`, `active`) VALUES
-(1, 'Administrator', 'admin@localhost', 'admin', '$2a$12$SR04o2/JNV5ZoVGZNgPiiezqM2f5D0eVDXsSDoWcfQqg/mST6O6Ye', '2013-04-18', 1);
+(1, 'Administrator', 'admin@localhost', 'admin', '$2a$12$SR04o2/JNV5ZoVGZNgPiiezqM2f5D0eVDXsSDoWcfQqg/mST6O6Ye', '2013-04-19', 1),
+(2, 'Nurul Maulidiah', 'lia.sf07@gmail.com', 'lia', '$2a$12$SR04o2/JNV5ZoVGZNgPiiezqM2f5D0eVDXsSDoWcfQqg/mST6O6Ye', '2013-04-19', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users_activity`
+--
+
+CREATE TABLE IF NOT EXISTS `users_activity` (
+  `user_id` int(5) unsigned NOT NULL,
+  `activity_mark` varchar(100) NOT NULL,
+  `time` time DEFAULT NULL,
+  `point` int(5) unsigned NOT NULL,
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `users_activity`
+--
+
+INSERT INTO `users_activity` (`user_id`, `activity_mark`, `time`, `point`) VALUES
+(1, '0', '00:20:13', 10),
+(2, '10', '00:20:13', 100);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users_alias`
+--
+
+CREATE TABLE IF NOT EXISTS `users_alias` (
+  `alias_name` varchar(100) NOT NULL,
+  `user_id` int(5) unsigned NOT NULL,
+  PRIMARY KEY (`alias_name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `users_alias`
+--
+
+INSERT INTO `users_alias` (`alias_name`, `user_id`) VALUES
+('nurul.maulidiah', 2),
+('yayan', 1);
 
 -- --------------------------------------------------------
 
@@ -174,44 +194,25 @@ INSERT INTO `users_permissions` (`user_id`, `permission_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user_activity`
+-- Table structure for table `users_profile`
 --
 
-CREATE TABLE IF NOT EXISTS `users_activity` (
-  `user_id` int(5) unsigned NOT NULL,
-  `activity_mark` varchar(100) NOT NULL,
-  `time` time DEFAULT NULL,
-  `point` int(5) unsigned NOT NULL,
+CREATE TABLE IF NOT EXISTS `users_profile` (
+  `user_id` int(5) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  `display_name` varchar(100) NOT NULL DEFAULT 'Dropin User',
+  `email` varchar(100) NOT NULL,
+  `birthday` date DEFAULT NULL,
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
--- Dumping data for table `user_activity`
+-- Dumping data for table `users_profile`
 --
 
-INSERT INTO `users_activity` (`user_id`, `activity_mark`, `time`, `point`) VALUES
-(1, '0', '00:20:13', 10),
-(2, '10', '00:20:13', 100);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `user_alias`
---
-
-CREATE TABLE IF NOT EXISTS `users_alias` (
-  `alias_name` varchar(100) NOT NULL,
-  `user_id` int(5) unsigned NOT NULL,
-  PRIMARY KEY (`alias_name`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `user_alias`
---
-
-INSERT INTO `users_alias` (`alias_name`, `user_id`) VALUES
-('nurul.maulidiah', 2),
-('yayan', 1);
+INSERT INTO `users_profile` (`user_id`, `name`, `display_name`, `email`, `birthday`) VALUES
+(1, 'yayan', 'yayan', 'yansyaf@gmail.com', '1985-06-04'),
+(2, 'nurul maulidiah', 'nurul', 'lia.sf07@gmail.com', '1988-11-17');
 
 --
 -- Constraints for dumped tables
