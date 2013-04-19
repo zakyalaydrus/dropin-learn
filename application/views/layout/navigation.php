@@ -5,11 +5,12 @@
     <!-- Site navigation menu -->
     <div id="header-navmenu">
         <ul>
-
+            
             <?php if ($login['is_logged']) { ?>
-                <strong>Hello <?= $login['name'] ?></strong>;
+                <li><a href="<?php base_url('user/' . $login['alias_name']) ?>"><strong><?= $login['name'] ?></strong></a></li>
+                <li>|</li>
             <?php } ?>
-
+                
             <li><a href="<?php echo base_url('/') ?>">Home</a>
             <li>|</li>
 
