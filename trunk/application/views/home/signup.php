@@ -1,5 +1,5 @@
-<form action="">
-				
+<form action="<?php echo base_url('signups/email') ?>" method="post" id="login_form">
+    
 <div id="login-container">
 
 	<div id="login-box">

@@ -1,4 +1,4 @@
-<form action="<?php echo site_url('logins/validate') ?>" method="post" id="login_form">
+<form action="<?php echo base_url('logins/validate') ?>" method="post" id="login_form">
 
     <div id="login-container">   
 

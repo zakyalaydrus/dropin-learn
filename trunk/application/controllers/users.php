@@ -23,11 +23,11 @@ class Users extends MY_Controller {
             $user_id = $alias['user_id'];
         }
 
-        $data['title'] = 'User ' . $user_id;
-        $data['content'] = 'users/user_home';
         $data['user'] = $this->user_profile->find_by_id($user_id);
         $data['activity'] = $this->user_activity->find_by_id($user_id);        
         $data['login'] = $this->set_login_status();
+        $data['title'] = $data['user']['name'];
+        $data['content'] = 'users/user_home';
         
         if ($user_id == $this->login->get_id()) {
             $data['is_valid_access'] = 1;
