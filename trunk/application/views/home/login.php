@@ -1,4 +1,4 @@
-<form action="">
+<form action="<?php echo site_url('logins/validate') ?>" method="post" id="login_form">
 				
 <div id="login-container">
 
@@ -21,8 +21,8 @@
 						<p>Password &nbsp;&nbsp;</p>					
 					</div>
 					<div style="float: left; height: 70px;">
-						<input type="text" /><br /><br />
-						<input type="password" />
+						<input name="login" id="login" placeholder="Login" /><br /><br />
+						<input type="password" name="password" id="password" placeholder="Password" />
 					</div>				
 				</div>				
 				<div style="text-align: left; padding: 0px 0px 0px 107px;">
