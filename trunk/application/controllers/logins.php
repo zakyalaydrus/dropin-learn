@@ -46,11 +46,10 @@ class Logins extends MY_Controller {
          * It also creates the user session.
          */
         if ($this->login->login($login, $password)) {
-            // Success
-            $user_id = $this->login->get_id();
-            
-            //get user alias, if any..
-            redirect(base_url('users/show/' . $user_id));
+            //get user alias, if any.. hmmm for now by default always have alias 
+            //at minimum alias name is the same as ID
+            $alias_name = $this->user_alias->find_alias_name($this->login->get_id());
+            redirect(base_url('user/' . $alias_name));
         } else {
             // Oh, holdon sir.
             $this->session->set_flashdata('error_message', 'Invalid login or password.');
