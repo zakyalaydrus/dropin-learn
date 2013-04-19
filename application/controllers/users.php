@@ -28,6 +28,14 @@ class Users extends MY_Controller {
         $data['user'] = $this->user_profile->find_by_id($user_id);
         $data['activity'] = $this->user_activity->find_by_id($user_id);        
         $data['login'] = $this->set_login_status();
+        
+        if ($user_id == $this->login->get_id()) {
+            $data['is_valid_access'] = 1;
+        }
+        else {
+            $data['is_valid_access'] = 0;            
+        }
+        
         $this->load->view($this->layout, $data);
     }
 
