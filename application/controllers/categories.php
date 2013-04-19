@@ -15,7 +15,7 @@ class Categories extends MY_Controller {
 
     public function show($category_id = 1) {
         $data['title'] = 'Category ' . $category_id;
-        $data['content'] = 'categories/' . $category_id;
+        $data['content'] = 'categories/category_home';
         $data['login'] = $this->set_login_status();
         $this->load->view($this->layout, $data);
     }
