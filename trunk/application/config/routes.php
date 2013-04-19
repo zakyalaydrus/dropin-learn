@@ -50,10 +50,13 @@ $route['user/(:any)'] = "users/show/$1";
 $route['user/(:num)/groups'] = "users/groups/$1";
 $route['user/(:num)/topics'] = "users/topics/$1";
 
+$route['topic'] = "topics";
 $route['topic/(:any)/(:any)'] = "topics/show/$1/$2";
 
+$route['group'] = "groups";
 $route['group/(:any)'] = "groups/show/$1";
 
+$route['category'] = "categories";
 $route['category/(:num)'] = "categories/show/$1";
 
 $route['tests/install'] = "tests/install";
