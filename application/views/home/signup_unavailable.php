@@ -1,0 +1,1 @@
+<div align="center">Sign up is currently unavailable! Go to <a href="<?= base_url('login')?>">Login</a> instead.</div>

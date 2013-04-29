@@ -11,6 +11,7 @@ class Homes extends MY_Controller {
         $data['title'] = "Home";
         $data['content'] = 'home/index';
         $data['login'] = $this->set_login_status();
+        //var_dump($data); die();
         $this->load->view($this->layout, $data);
     }
 

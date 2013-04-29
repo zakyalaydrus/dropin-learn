@@ -1,3 +1,5 @@
+<div align="center">Demo, username: <strong>admin</strong>, password: <strong>admin</strong>.</div>
+
 <form action="<?php echo base_url('logins/validate') ?>" method="post" id="login_form">
 
     <div id="login-container">   
