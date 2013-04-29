@@ -101,8 +101,26 @@ CREATE TABLE IF NOT EXISTS `topics` (
 --
 
 INSERT INTO `topics` (`topic_id`, `name`, `description`, `topic_url`) VALUES
-(1, 'Matematika Diskrit', 'Matematika diskrit adalah...', 'matematika-diskrit'),
-(2, 'Farmakologi Klinis', 'Farmakologi klinis adalah...', 'farmakologi-klinis');
+(1, 'Bentuk Pangkat, Akar dan Logaritma', 'Bentuk Pangkat, Akar dan Logaritma adalah...', 'bentuk-pangkat-akar-dan-logaritma'),
+(2, 'Persamaan dan Fungsi', 'Persamaan dan Fungsi adalah...', 'persamaan-dan-fungsi'),
+(3, 'Persamaan Kuadrat', 'Persamaan Kuadrat adalah...', 'persamaan-kuadrat'),
+(4, 'Farmakologi Klinis', 'Farmakologi klinis adalah...', 'farmakologi-klinis'),
+(5, 'Matematika Diskrit', 'Matematika diskrit adalah...', 'matematika-diskrit'),
+(6, 'Farmakologi Klinis', 'Farmakologi klinis adalah...', 'farmakologi-klinis'),
+(7, 'Matematika Diskrit', 'Matematika diskrit adalah...', 'matematika-diskrit'),
+(8, 'Farmakologi Klinis', 'Farmakologi klinis adalah...', 'farmakologi-klinis'),
+(9, 'Matematika Diskrit', 'Matematika diskrit adalah...', 'matematika-diskrit'),
+(10, 'Farmakologi Klinis', 'Farmakologi klinis adalah...', 'farmakologi-klinis'),
+(11, 'Matematika Diskrit', 'Matematika diskrit adalah...', 'matematika-diskrit'),
+(12, 'Farmakologi Klinis', 'Farmakologi klinis adalah...', 'farmakologi-klinis'),
+(13, 'Matematika Diskrit', 'Matematika diskrit adalah...', 'matematika-diskrit'),
+(14, 'Farmakologi Klinis', 'Farmakologi klinis adalah...', 'farmakologi-klinis'),
+(15, 'Matematika Diskrit', 'Matematika diskrit adalah...', 'matematika-diskrit'),
+(16, 'Farmakologi Klinis', 'Farmakologi klinis adalah...', 'farmakologi-klinis'),
+(17, 'Matematika Diskrit', 'Matematika diskrit adalah...', 'matematika-diskrit'),
+(18, 'Farmakologi Klinis', 'Farmakologi klinis adalah...', 'farmakologi-klinis'),
+(19, 'Matematika Diskrit', 'Matematika diskrit adalah...', 'matematika-diskrit'),
+(20, 'Farmakologi Klinis', 'Farmakologi klinis adalah...', 'farmakologi-klinis');
 
 -- --------------------------------------------------------
 
@@ -211,8 +229,8 @@ CREATE TABLE IF NOT EXISTS `users_profile` (
 --
 
 INSERT INTO `users_profile` (`user_id`, `name`, `display_name`, `email`, `birthday`) VALUES
-(1, 'yayan', 'yayan', 'yansyaf@gmail.com', '1985-06-04'),
-(2, 'nurul maulidiah', 'nurul', 'lia.sf07@gmail.com', '1988-11-17');
+(1, 'Yan Syafri Hidayat', 'Yan Syafri Hidayat', 'yansyaf@gmail.com', '1985-06-04'),
+(2, 'Nurul Maulidiah', 'Nurul Maulidiah', 'lia.sf07@gmail.com', '1988-11-17');
 
 --
 -- Constraints for dumped tables

@@ -17,7 +17,8 @@ class Categories extends MY_Controller {
         $data['title'] = 'Category ' . $category_id;
         $data['content'] = 'categories/category_home';
         $data['login'] = $this->set_login_status();
-        $this->load->view($this->layout, $data);
+//        $this->load->view($this->layout, $data);
+        $this->load->view('layout/temporary_category', $data);
     }
 
 }

@@ -8,7 +8,7 @@
 <source src="video/Business-Model-Canvas-Explained.mp4" />
 </object>
 </video>
-	
+    
 </div>
 <div id="home-list-container">
 	<div>
@@ -37,19 +37,19 @@
     <label for="radio_professional">PROFESSIONAL</label>
 
     <input type="radio" id="radio_kuliah" name="radios" value="kuliah">
-    <label for="radio_kuliah">KULIAH</label>
+    <label for="radio_kuliah">HOBBIES</label>
 
     <input type="radio" id="radio_sma" name="radios" value="sma">
-    <label for="radio_sma">SMA/SMK</label>
+    <label for="radio_sma">COLLEGE</label>
 
     <input type="radio" id="radio_smp" name="radios" value="smp">
-    <label for="radio_smp">SMP</label>
+    <label for="radio_smp">HIGH SCHOOL</label>
 
     <input type="radio" id="radio_sd" name="radios" value="sd">
-    <label for="radio_sd">SD</label>
+    <label for="radio_sd">GRADE 7-9</label>
 
     <input type="radio" id="radio_hobby" name="radios" value="hobby">
-    <label for="radio_hobby">HOBBY</label>
+    <label for="radio_hobby">GRADE 1-6</label>
 
     <input type="radio" id="radio_other" name="radios" value="others">
     <label for="radio_other">OTHERS</label>
@@ -65,58 +65,60 @@
 	
 	<div id="subcategory-professional" class="hide">
 	<div class="label-toolbar">  
-		<a href="<?php echo base_url('about') ?>">SAR</a>
-		<a href="<?php echo base_url('products') ?>">VERILOG</a>
+		<a href="<?php echo base_url('category/1') ?>">BUSINESS MANAGEMENT</a>
+		<a href="<?php echo base_url('category/1') ?>">VLSI DESIGN</a>
 	</div>	
 	</div>
 
 	<div id="subcategory-kuliah" class="hide">
 	<div class="label-toolbar">  
-		<a href="<?php echo base_url('category') ?>">ELEKTRONIKA</a>
-		<a href="<?php echo base_url('category') ?>">KOMPUTER</a>
-		<a href="<?php echo base_url('category') ?>">INFORMATIKA</a>
-		<a href="<?php echo base_url('category') ?>">FARMASI</a>
+		<a href="<?php echo base_url('category/1') ?>">ELEKTRONIKA</a>
+		<a href="<?php echo base_url('category/1') ?>">KOMPUTER</a>
+		<a href="<?php echo base_url('category/1') ?>">INFORMATIKA</a>
+		<a href="<?php echo base_url('category/1') ?>">FARMASI</a>
 	</div>	
 	</div>	
 
 	<div id="subcategory-sma" class="hide">
 	<div class="label-toolbar">  
-		<a href="<?php echo base_url('category') ?>">MATEMATIKA</a>
-		<a href="<?php echo base_url('category') ?>">FISIKA</a>
-		<a href="<?php echo base_url('category') ?>">KIMIA</a>
-		<a href="<?php echo base_url('category') ?>">BIOLOGI</a>
-		<a href="<?php echo base_url('category') ?>">SEJARAH</a>
-		<a href="<?php echo base_url('category') ?>">SOSIOLOGI</a>
+		<a href="<?php echo base_url('category/1') ?>">MATEMATIKA</a>
+		<a href="<?php echo base_url('category/1') ?>">FISIKA</a>
+		<a href="<?php echo base_url('category/1') ?>">KIMIA</a>
+		<a href="<?php echo base_url('category/1') ?>">BIOLOGI</a>
+		<a href="<?php echo base_url('category/1') ?>">SEJARAH</a>
+		<a href="<?php echo base_url('category/1') ?>">SOSIOLOGI</a>
 	</div>	
 	</div>	
 
 	<div id="subcategory-smp" class="hide">
 	<div class="label-toolbar">  
-		<a href="<?php echo base_url('category') ?>">MATEMATIKA</a>
-		<a href="<?php echo base_url('category') ?>">FISIKA</a>
-		<a href="<?php echo base_url('category') ?>">KIMIA</a>
-		<a href="<?php echo base_url('category') ?>">BIOLOGI</a>
-		<a href="<?php echo base_url('category') ?>">SEJARAH</a>
+		<a href="<?php echo base_url('category/1') ?>">MATEMATIKA</a>
+		<a href="<?php echo base_url('category/1') ?>">FISIKA</a>
+		<a href="<?php echo base_url('category/1') ?>">KIMIA</a>
+		<a href="<?php echo base_url('category/1') ?>">BIOLOGI</a>
+		<a href="<?php echo base_url('category/1') ?>">SEJARAH</a>
 	</div>	
 	</div>	
 
 	<div id="subcategory-sd" class="hide">
 	<div class="label-toolbar">  
-		<a href="<?php echo base_url('category') ?>">MATEMATIKA</a>
-		<a href="<?php echo base_url('category') ?>">IPS</a>
-		<a href="<?php echo base_url('category') ?>">IPA</a>
+		<a href="<?php echo base_url('category/1') ?>">MATEMATIKA</a>
+		<a href="<?php echo base_url('category/1') ?>">IPS</a>
+		<a href="<?php echo base_url('category/1') ?>">IPA</a>
 	</div>	
 	</div>	
 	
 	<div id="subcategory-hobby" class="hide">
 	<div class="label-toolbar">  
-		<a href="<?php echo base_url('category') ?>">GARDENING</a>
+		<a href="<?php echo base_url('category/1') ?>">MATEMATIKA</a>
+		<a href="<?php echo base_url('category/1') ?>">IPS</a>
+		<a href="<?php echo base_url('category/1') ?>">IPA</a>
 	</div>	
 	</div>	
 
 	<div id="subcategory-other" class="hide">
 	<div class="label-toolbar">  
-		<a href="<?php echo base_url('category') ?>">UNKNOWN</a>
+		<a href="<?php echo base_url('category/1') ?>">UNKNOWN</a>
 	</div>	
 	</div>	
 	
@@ -258,19 +260,19 @@ Comment 120
 </div>
 
 <div id="category-box-content">
-	<div id="category-box-content-icon"><a href="<?php echo base_url('topic/1') ?>"><img src="<?php echo base_url(); ?>assets/images/topic1.png" /></a></div>
-	<div id="category-box-content-icon"><a href="<?php echo base_url('topic/2') ?>"><img src="<?php echo base_url(); ?>assets/images/topic2.png" /></a></div>
-	<div id="category-box-content-icon"><a href="<?php echo base_url('topic/3') ?>"><img src="<?php echo base_url(); ?>assets/images/topic3.png" /></a></div>
-	<div id="category-box-content-icon"><a href="<?php echo base_url('topic/4') ?>"><img src="<?php echo base_url(); ?>assets/images/topic4.png" /></a></div>
-	<div id="category-box-content-icon"><a href="<?php echo base_url('topic/5') ?>"><img src="<?php echo base_url(); ?>assets/images/topic5.png" /></a></div>
-        <div id="category-box-content-icon"><a href="<?php echo base_url('topic/6') ?>"><img src="<?php echo base_url(); ?>assets/images/topic6.png" /></a></div>
-        <div id="category-box-content-icon"><a href="<?php echo base_url('topic/7') ?>"><img src="<?php echo base_url(); ?>assets/images/topic7.png" /></a></div>
-	<div id="category-box-content-icon"><a href="<?php echo base_url('topic/8') ?>"><img src="<?php echo base_url(); ?>assets/images/topic8.png" /></a></div>
-	<div id="category-box-content-icon"><a href="<?php echo base_url('topic/9') ?>"><img src="<?php echo base_url(); ?>assets/images/topic9.png" /></a></div>
-	<div id="category-box-content-icon"><a href="<?php echo base_url('topic/10') ?>"><img src="<?php echo base_url(); ?>assets/images/topic10.png" /></a></div>
-	<div id="category-box-content-icon"><a href="<?php echo base_url('topic/11') ?>"><img src="<?php echo base_url(); ?>assets/images/topic1.png" /></a></div>
-	<div id="category-box-content-icon"><a href="<?php echo base_url('topic/12') ?>"><img src="<?php echo base_url(); ?>assets/images/topic2.png" /></a></div>
-	<div id="category-box-content-icon"><a href="<?php echo base_url('topic/13') ?>"><img src="<?php echo base_url(); ?>assets/images/topic3.png" /></a></div>
-	<div id="category-box-content-icon"><a href="<?php echo base_url('topic/14') ?>"><img src="<?php echo base_url(); ?>assets/images/topic4.png" /></a></div>
-	<div id="category-box-content-icon"><a href="<?php echo base_url('topic/15') ?>"><img src="<?php echo base_url(); ?>assets/images/topic5.png" /></a></div>
+	<div id="category-box-content-icon"><a href="<?php echo base_url('topic/sejarah-australia/1') ?>"><img src="<?php echo base_url(); ?>assets/images/topic1.png" /></a></div>
+	<div id="category-box-content-icon"><a href="<?php echo base_url('topic/sejarah-australia/2') ?>"><img src="<?php echo base_url(); ?>assets/images/topic2.png" /></a></div>
+	<div id="category-box-content-icon"><a href="<?php echo base_url('topic/sejarah-australia/3') ?>"><img src="<?php echo base_url(); ?>assets/images/topic3.png" /></a></div>
+	<div id="category-box-content-icon"><a href="<?php echo base_url('topic/sejarah-australia/4') ?>"><img src="<?php echo base_url(); ?>assets/images/topic4.png" /></a></div>
+	<div id="category-box-content-icon"><a href="<?php echo base_url('topic/sejarah-australia/5') ?>"><img src="<?php echo base_url(); ?>assets/images/topic5.png" /></a></div>
+        <div id="category-box-content-icon"><a href="<?php echo base_url('topic/sejarah-australia/6') ?>"><img src="<?php echo base_url(); ?>assets/images/topic6.png" /></a></div>
+        <div id="category-box-content-icon"><a href="<?php echo base_url('topic/sejarah-australia/7') ?>"><img src="<?php echo base_url(); ?>assets/images/topic7.png" /></a></div>
+	<div id="category-box-content-icon"><a href="<?php echo base_url('topic/sejarah-australia/8') ?>"><img src="<?php echo base_url(); ?>assets/images/topic8.png" /></a></div>
+	<div id="category-box-content-icon"><a href="<?php echo base_url('topic/sejarah-australia/9') ?>"><img src="<?php echo base_url(); ?>assets/images/topic9.png" /></a></div>
+	<div id="category-box-content-icon"><a href="<?php echo base_url('topic/sejarah-australia/10') ?>"><img src="<?php echo base_url(); ?>assets/images/topic10.png" /></a></div>
+	<div id="category-box-content-icon"><a href="<?php echo base_url('topic/sejarah-australia/11') ?>"><img src="<?php echo base_url(); ?>assets/images/topic1.png" /></a></div>
+	<div id="category-box-content-icon"><a href="<?php echo base_url('topic/sejarah-australia/12') ?>"><img src="<?php echo base_url(); ?>assets/images/topic2.png" /></a></div>
+	<div id="category-box-content-icon"><a href="<?php echo base_url('topic/sejarah-australia/13') ?>"><img src="<?php echo base_url(); ?>assets/images/topic3.png" /></a></div>
+	<div id="category-box-content-icon"><a href="<?php echo base_url('topic/sejarah-australia/14') ?>"><img src="<?php echo base_url(); ?>assets/images/topic4.png" /></a></div>
+	<div id="category-box-content-icon"><a href="<?php echo base_url('topic/sejarah-australia/15') ?>"><img src="<?php echo base_url(); ?>assets/images/topic5.png" /></a></div>
 </div>	

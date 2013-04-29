@@ -3,7 +3,7 @@
     <head>
         <title><?php echo isset($title) ? "Dropin: $title" : NULL; ?></title>
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/main.css" type="text/css" />
-        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/content.css" type="text/css" />
+        <link rel="stylesheet" href="/assets/css/main.css" type="text/css" />
         <script src="<?php echo base_url(); ?>assets/js/jquery-latest.js"></script>
     </head>
 
@@ -145,12 +145,18 @@
                 };
 
             }
-        </script>
+    </script>
 
-        <?php $this->load->view('layout/navigation'); ?>
+    <?php $this->load->view('layout/navigation'); ?>
+
+    <div id="temp" align="center" style="position:absolute; top:66px; left:125px;">
+        <img src="<?= base_url('assets/images/group_1.png') ?>"></img>            
+    </div>
     
-        <div id="searchbar">
-            <input type="text" name="textfield" id="textfield" class="search" placeholder="Share and learn almost anything you want!" />	
-        </div>  
+<!--    <div id="footer">
+        <hr />
+        <p>Copyright &copy; Dropin Inc. 2012</p> Page rendered in <strong>{elapsed_time}</strong> seconds</p>
+    </div>-->
 
-    <body>
+</body>
+</html>        

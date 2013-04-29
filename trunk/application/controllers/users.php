@@ -13,6 +13,7 @@ class Users extends MY_Controller {
     public function index() {
         $data['title'] = "User List";
         $data['content'] = 'users/index';
+        $data['login'] = $this->set_login_status();
         $this->load->view($this->layout, $data);
     }
 
@@ -36,7 +37,8 @@ class Users extends MY_Controller {
             $data['is_valid_access'] = 0;            
         }
         
-        $this->load->view($this->layout, $data);
+//        $this->load->view($this->layout, $data);
+        $this->load->view('layout/temporary_user', $data);
     }
 
     public function groups($user_id = 1) {

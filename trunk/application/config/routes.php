@@ -61,5 +61,8 @@ $route['category/(:num)'] = "categories/show/$1";
 
 $route['tests/install'] = "tests/install";
 
+//temporary
+$route['signup_unavailable'] = "signups/email";
+
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
