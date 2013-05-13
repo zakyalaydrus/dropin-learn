@@ -29,8 +29,8 @@ class Groups extends MY_Controller {
         $data['content'] = 'groups/group_home';
         $data['group'] = $group;
         $data['login'] = $this->set_login_status();        
-//        $this->load->view($this->layout, $data);
-        $this->load->view('layout/temporary_group', $data);
+        $this->load->view($this->layout, $data);
+//        $this->load->view('layout/temporary_group', $data);
     }
 
 }
