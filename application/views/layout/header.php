@@ -148,9 +148,5 @@
         </script>
 
         <?php $this->load->view('layout/navigation'); ?>
-    
-        <div id="searchbar">
-            <input type="text" name="textfield" id="textfield" class="search" placeholder="Share and learn almost anything you want!" />	
-        </div>  
-
+            
     <body>

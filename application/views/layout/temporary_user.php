@@ -149,9 +149,9 @@
 
     <?php $this->load->view('layout/navigation'); ?>
 
-    <div id="temp" align="center" style="position:absolute; top:66px; left:125px;">
-        <img src="<?= base_url('assets/images/user_' . $user['user_id'] . '.png') ?>"></img>            
-    </div>
+    <div style="float:none">
+        <img src="<?= base_url('assets/uploads/cover_' . $user['user_id'] . '.png') ?>"></img>            
+    </div>    
     
 <!--    <div id="footer">
         <hr />

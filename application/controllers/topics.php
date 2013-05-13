@@ -23,8 +23,8 @@ class Topics extends MY_Controller {
         $data['content'] = 'topics/topic_home';
         $data['topic'] = $topic;
         $data['login'] = $this->set_login_status();        
-//        $this->load->view($this->layout, $data);
-        $this->load->view('layout/temporary_topic', $data);
+        $this->load->view($this->layout, $data);
+//        $this->load->view('layout/temporary_topic', $data);
     }
 
 }

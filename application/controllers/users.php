@@ -4,6 +4,7 @@ class Users extends MY_Controller {
 
     public function __construct() {
         parent::__construct();
+        $this->layout = 'layouts/user';
         $this->load->library('login');
         $this->load->model('user_profile');
         $this->load->model('user_alias');
@@ -37,8 +38,8 @@ class Users extends MY_Controller {
             $data['is_valid_access'] = 0;            
         }
         
-//        $this->load->view($this->layout, $data);
-        $this->load->view('layout/temporary_user', $data);
+        $this->load->view($this->layout, $data);
+//        $this->load->view('layout/temporary_user', $data);
     }
 
     public function groups($user_id = 1) {

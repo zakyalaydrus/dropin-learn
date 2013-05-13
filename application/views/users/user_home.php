@@ -1,8 +1,8 @@
-<div align="center" style="margin: auto;">
+<div style="margin: auto;">
     
-    <div style="float:none">
-        <img src="<?= base_url('assets/uploads/cover_' . $user['user_id'] . '.png') ?>"></img>            
-    </div>
+    <div id="searchbar" style="height: 400px; background-image:url('<?php echo base_url(); ?>assets/uploads/cover_<?= $user['user_id'] ?>.png')">
+        <input style="background-color:#FFFFFF;" type="text" name="textfield" id="textfield" class="search" placeholder="Share and learn almost anything you want!" />	
+    </div>  
     
     <h1>User <?= $user['name'] ?></h1>
     <p>Nickname: <?= $user['display_name'] ?></p>
